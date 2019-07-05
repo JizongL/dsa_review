@@ -28,6 +28,7 @@ class LinkedList{
         }
     }
 
+
     insertBefore(item,key){
         let currNode = this.head;
         let previousNode = this.head;
@@ -54,6 +55,16 @@ class LinkedList{
         }
         let InsertNode = new _Node(item,nextNode)
         currNode.next = InsertNode
+    }
+
+    reverseLinkedList(){
+        let currNode = this.head;
+        let prevNode = this.head;
+        while(currNode!==null){
+            prevNode = currNode;
+            currNode = currNode.next;
+        }
+        currNode.next = prevNode
     }
 
     insertBefore(item,key){
